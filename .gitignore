@@ -1,0 +1,21 @@
+# Arquivos do macOS
+.DS_Store
+
+# Arquivos temporários do Word
+~$*
+
+# Documento original da atividade
+Prática Avaliada - Semana 4.docx
+
+# Dependências Node.js
+node_modules/
+
+# Arquivos de ambiente
+.env
+.env.local
+
+# Arquivos de log
+*.log
+
+# Arquivos gerados por builds
+dist/
