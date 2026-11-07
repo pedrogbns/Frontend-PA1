@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Cliente-Servidor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Arquitetura Cliente-Servidor</h1>
+        <p>Análise do acesso ao site portal.fgv.br</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Fluxo de comunicação cliente-servidor</h2>
+
+            <p>
+                Quando um usuário digita portal.fgv.br no navegador, inicia-se um
+                processo de comunicação entre o cliente, que neste caso é o navegador,
+                e o servidor responsável pelo site.
+            </p>
+
+            <p>
+                Primeiro, o navegador precisa descobrir o endereço IP associado ao
+                domínio portal.fgv.br por meio do DNS. Depois disso, a requisição
+                percorre a Internet através de diferentes roteadores até chegar ao
+                servidor. O servidor processa a solicitação e envia uma resposta de
+                volta ao navegador, que interpreta os arquivos recebidos e apresenta
+                a página ao usuário.
+            </p>
+        </section>
+
+        <section>
+            <h2>Resolução DNS</h2>
+
+            <p>
+                O DNS (Domain Name System) é responsável por traduzir nomes de
+                domínio, como portal.fgv.br, em endereços IP que permitem localizar
+                servidores na Internet.
+            </p>
+
+            <p>
+                Quando o usuário acessa o site, o navegador verifica se já possui
+                o endereço IP armazenado em cache. Caso não tenha, realiza uma
+                consulta ao sistema DNS para descobrir o endereço correspondente.
+                Com o endereço IP obtido, o navegador pode estabelecer uma conexão
+                com o servidor do site.
+            </p>
+        </section>
+
+        <section>
+            <h2>Cache do navegador</h2>
+
+            <p>
+                O cache do navegador é um mecanismo que armazena
+                temporariamente recursos de sites visitados, como
+                imagens, arquivos CSS e JavaScript.
+            </p>
+
+            <p>
+                Quando o usuário acessa novamente o portal.fgv.br,
+                o navegador verifica se possui recursos armazenados
+                em cache e se eles ainda podem ser reutilizados.
+                Isso pode reduzir a quantidade de dados transferidos
+                do servidor, tornando o carregamento da página
+                mais rápido.
+            </p>
+        </section>
+
+        <section>
+            <h2>O papel dos roteadores</h2>
+
+            <p>
+                Os roteadores são dispositivos responsáveis por
+                encaminhar pacotes de dados entre diferentes redes,
+                permitindo a comunicação entre o cliente e o servidor.
+            </p>
+
+            <p>
+                Quando o usuário acessa o portal.fgv.br, os dados
+                enviados pelo navegador são divididos em pacotes
+                que percorrem diferentes roteadores pela Internet
+                até chegar ao destino.
+            </p>
+
+            <p>
+                Cada roteador analisa o endereço IP de destino
+                e utiliza sua tabela de roteamento para determinar
+                o próximo caminho dos pacotes. As respostas do
+                servidor também percorrem a rede até chegar
+                ao navegador do usuário.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>Diferença entre frontend e backend</h2>
+
+                <h3>Frontend</h3>
+
+                <p>
+                    O frontend é a parte da aplicação com a qual
+                    o usuário interage diretamente. É responsável
+                    pela apresentação visual, organização dos
+                    conteúdos e interatividade da página.
+                </p>
+
+                <p>
+                    No portal.fgv.br, o navegador interpreta
+                    o HTML, CSS e JavaScript para apresentar
+                    os elementos da página, como textos,
+                    imagens, menus e botões.
+                </p>
+
+                <h3>Backend</h3>
+
+                <p>
+                    O backend é a parte da aplicação executada
+                    no servidor. É responsável por processar
+                    requisições, executar regras de negócio e,
+                    quando necessário, acessar bancos de dados.
+                </p>
+
+                <p>
+                    No contexto do portal.fgv.br, o backend
+                    pode processar solicitações do navegador,
+                    consultar informações e enviar respostas
+                    para que o frontend apresente os dados
+                    ao usuário.
+                </p>
+        </section>
+
+        <section>
+            <h2>Diagrama do fluxo cliente-servidor</h2>
+
+            <p>
+                O diagrama abaixo representa de forma simplificada
+                a comunicação entre o navegador e o servidor
+                quando um usuário acessa o portal.fgv.br.
+            </p>
+
+            <div class="diagrama">
+                <div class="etapa">Usuário</div>
+                <div class="seta">↓</div>
+
+                <div class="etapa">Navegador (Cliente)</div>
+                <div class="seta">↓</div>
+
+                <div class="etapa">Resolução DNS</div>
+                <div class="seta">↓</div>
+
+                <div class="etapa">Internet (Roteadores)</div>
+                <div class="seta">↓</div>
+
+                <div class="etapa">Servidor Web</div>
+                <div class="seta">↓</div>
+
+                <div class="etapa">Resposta HTTP/HTTPS</div>
+                <div class="seta">↓</div>
+
+                <div class="etapa">Navegador exibe a página</div>
+            </div>
+        </section>
+
+
+    </main>
+
+</body>
+</html>
